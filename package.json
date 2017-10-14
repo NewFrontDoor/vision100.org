@@ -1,0 +1,82 @@
+{
+  "name": "vision100.org",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-emotion": "^8.0.4",
+    "classnames": "^2.2.5",
+    "emotion": "^8.0.5",
+    "emotion-server": "^8.0.5",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "graphql-compose": "^2.4.0",
+    "graphql-compose-connection": "^2.2.2",
+    "graphql-compose-mongoose": "^1.8.1",
+    "isomorphic-fetch": "^2.2.1",
+    "keystone": "^4.0.0-beta.5",
+    "lodash": "^4.17.4",
+    "model-transform": "^2.0.0",
+    "next": "^4.0.3",
+    "pino-colada": "^1.4.2",
+    "pino-http": "^2.6.2",
+    "polished": "^1.8.0",
+    "react": "^16.0.0",
+    "react-apollo": "^1.4.16",
+    "react-dom": "^16.0.0",
+    "react-emotion": "^8.0.5",
+    "react-redux": "^5.0.6",
+    "react-scroll": "^1.5.3",
+    "redux": "^3.6.0",
+    "typeface-raleway": "^0.0.35",
+    "typography": "^0.16.4"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-eslint": "^8.0.1",
+    "eslint-config-xo-react": "^0.13.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "^0.56.0",
+    "mongomem": "^0.1.9",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.1.0",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "xo": "^0.18.2"
+  },
+  "scripts": {
+    "flow": "flow",
+    "dev": "nodemon index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node index.js",
+    "test": "xo && nyc ava"
+  },
+  "nodemonConfig": {
+    "watch": ["index.js", "server.js", "package.json"]
+  },
+  "xo": {
+    "extends": ["xo-react", "plugin:flowtype/recommended"],
+    "plugins": ["flowtype"],
+    "parser": "babel-eslint",
+    "space": true,
+    "overrides": [
+      {
+        "files": "{components,models}/**/*.js",
+        "rules": {
+          "unicorn/filename-case": [
+            "error",
+            {
+              "case": "pascalCase"
+            }
+          ]
+        }
+      },
+      {
+        "files": "test/**/*.js",
+        "rules": {
+          "ava/no-skip-test": "warn"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+/node_modules
+/coverage
+/.next
+/.nyc_output
+/data
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
