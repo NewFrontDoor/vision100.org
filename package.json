@@ -37,7 +37,7 @@
     "eslint-config-xo-react": "^0.13.0",
     "eslint-plugin-flowtype": "^2.35.1",
     "eslint-plugin-react": "^7.3.0",
-    "flow-bin": "^0.56.0",
+    "flow-bin": "^0.57.2",
     "mongomem": "^0.1.9",
     "nodemon": "^1.11.0",
     "nyc": "^11.1.0",
